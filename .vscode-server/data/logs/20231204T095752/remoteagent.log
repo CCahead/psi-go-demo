@@ -1,0 +1,139 @@
+2023-12-04 09:57:52.706 [info] 
+
+
+
+
+2023-12-04 09:57:52.706 [info] Extension host agent started.
+2023-12-04 09:57:52.706 [debug] No uninstalled extensions found.
+2023-12-04 09:57:52.706 [info] Started initializing default profile extensions in extensions installation folder. file:///root/.vscode-server/extensions
+2023-12-04 09:57:52.710 [debug] ComputeTargetPlatform: linux-x64
+2023-12-04 09:57:52.713 [info] Completed initializing default profile extensions in extensions installation folder. file:///root/.vscode-server/extensions
+2023-12-04 09:57:53.246 [info] [127.0.0.1][8d35e5fe][ManagementConnection] New connection established.
+2023-12-04 09:57:53.428 [info] Log level changed to info
+2023-12-04 09:57:53.614 [info] [127.0.0.1][9df9f561][ExtensionHostConnection] New connection established.
+2023-12-04 09:57:53.618 [info] [127.0.0.1][9df9f561][ExtensionHostConnection] <268> Launched Extension Host Process.
+2023-12-04 09:58:55.528 [info] [127.0.0.1][8d35e5fe][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-12-04 09:58:55.547 [info] [127.0.0.1][9df9f561][ExtensionHostConnection] <268> Extension Host Process exited with code: 0, signal: null.
+2023-12-04 09:59:05.248 [info] [127.0.0.1][8dc40aad][ManagementConnection] New connection established.
+2023-12-04 09:59:05.794 [info] [127.0.0.1][6efd3c48][ExtensionHostConnection] New connection established.
+2023-12-04 09:59:05.799 [info] [127.0.0.1][6efd3c48][ExtensionHostConnection] <1321> Launched Extension Host Process.
+2023-12-04 13:02:05.927 [info] [127.0.0.1][6efd3c48][ExtensionHostConnection] <1321> Extension Host Process exited with code: 0, signal: null.
+2023-12-05 03:39:08.158 [info] [127.0.0.1][1f46256d][ManagementConnection] New connection established.
+2023-12-05 03:39:08.380 [info] [127.0.0.1][72d37e02][ExtensionHostConnection] New connection established.
+2023-12-05 03:39:08.386 [info] [127.0.0.1][72d37e02][ExtensionHostConnection] <19468> Launched Extension Host Process.
+2023-12-05 17:32:32.767 [info] [127.0.0.1][72d37e02][ExtensionHostConnection] <19468> Extension Host Process exited with code: 0, signal: null.
+2023-12-07 05:19:15.191 [info] [127.0.0.1][d78a5585][ManagementConnection] New connection established.
+2023-12-07 05:19:15.414 [info] [127.0.0.1][b6760784][ExtensionHostConnection] New connection established.
+2023-12-07 05:19:15.449 [info] [127.0.0.1][b6760784][ExtensionHostConnection] <19187> Launched Extension Host Process.
+2023-12-07 09:17:01.748 [info] [127.0.0.1][e542c939][ManagementConnection] New connection established.
+2023-12-07 09:17:02.336 [info] [127.0.0.1][6bec37f8][ExtensionHostConnection] New connection established.
+2023-12-07 09:17:02.341 [info] [127.0.0.1][6bec37f8][ExtensionHostConnection] <12303> Launched Extension Host Process.
+2023-12-07 09:22:01.874 [info] [127.0.0.1][b6760784][ExtensionHostConnection] <19187> Extension Host Process exited with code: 0, signal: null.
+2023-12-07 10:04:27.667 [info] [127.0.0.1][588ad18a][ManagementConnection] New connection established.
+2023-12-07 10:04:28.018 [info] [127.0.0.1][c4b4b43c][ExtensionHostConnection] New connection established.
+2023-12-07 10:04:28.022 [info] [127.0.0.1][c4b4b43c][ExtensionHostConnection] <4992> Launched Extension Host Process.
+2023-12-07 13:19:46.619 [info] [127.0.0.1][6bec37f8][ExtensionHostConnection] <12303> Extension Host Process exited with code: 0, signal: null.
+2023-12-07 16:23:49.103 [info] [127.0.0.1][c4b4b43c][ExtensionHostConnection] <4992> Extension Host Process exited with code: 0, signal: null.
+2023-12-08 01:20:40.356 [info] [127.0.0.1][f00454a1][ManagementConnection] New connection established.
+2023-12-08 01:20:44.136 [info] [127.0.0.1][330e466e][ExtensionHostConnection] New connection established.
+2023-12-08 01:20:44.148 [info] [127.0.0.1][330e466e][ExtensionHostConnection] <13177> Launched Extension Host Process.
+2023-12-08 02:10:07.254 [info] [127.0.0.1][adc3bae4][ManagementConnection] New connection established.
+2023-12-08 02:10:07.782 [info] [127.0.0.1][cfdf0172][ExtensionHostConnection] New connection established.
+2023-12-08 02:10:07.794 [info] [127.0.0.1][cfdf0172][ExtensionHostConnection] <21015> Launched Extension Host Process.
+2023-12-08 02:15:07.485 [info] [127.0.0.1][330e466e][ExtensionHostConnection] <13177> Extension Host Process exited with code: 0, signal: null.
+2023-12-08 06:34:31.889 [info] [127.0.0.1][cfdf0172][ExtensionHostConnection] <21015> Extension Host Process exited with code: 0, signal: null.
+2023-12-08 06:36:16.153 [info] [127.0.0.1][4e53db6c][ManagementConnection] New connection established.
+2023-12-08 06:36:16.440 [info] [127.0.0.1][da4841b0][ExtensionHostConnection] New connection established.
+2023-12-08 06:36:16.446 [info] [127.0.0.1][da4841b0][ExtensionHostConnection] <10614> Launched Extension Host Process.
+2023-12-08 09:44:52.659 [info] [127.0.0.1][4366e52c][ManagementConnection] New connection established.
+2023-12-08 09:44:52.982 [info] [127.0.0.1][ab7454b6][ExtensionHostConnection] New connection established.
+2023-12-08 09:44:52.989 [info] [127.0.0.1][ab7454b6][ExtensionHostConnection] <2209> Launched Extension Host Process.
+2023-12-08 09:49:52.875 [info] [127.0.0.1][da4841b0][ExtensionHostConnection] <10614> Extension Host Process exited with code: 0, signal: null.
+2023-12-08 13:09:27.540 [info] [127.0.0.1][ab7454b6][ExtensionHostConnection] <2209> Extension Host Process exited with code: 0, signal: null.
+2023-12-09 04:09:38.345 [info] [127.0.0.1][5b27735c][ManagementConnection] New connection established.
+2023-12-09 04:09:38.403 [info] [127.0.0.1][4124909a][ExtensionHostConnection] New connection established.
+2023-12-09 04:09:38.411 [info] [127.0.0.1][4124909a][ExtensionHostConnection] <31840> Launched Extension Host Process.
+2023-12-09 09:42:38.810 [info] [127.0.0.1][59b95dfd][ManagementConnection] New connection established.
+2023-12-09 09:42:39.291 [info] [127.0.0.1][cc1a8899][ExtensionHostConnection] New connection established.
+2023-12-09 09:42:39.298 [info] [127.0.0.1][cc1a8899][ExtensionHostConnection] <22809> Launched Extension Host Process.
+2023-12-09 09:47:39.026 [info] [127.0.0.1][4124909a][ExtensionHostConnection] <31840> Extension Host Process exited with code: 0, signal: null.
+2023-12-10 19:39:37.923 [info] [127.0.0.1][cc1a8899][ExtensionHostConnection] <22809> Extension Host Process exited with code: 0, signal: null.
+2023-12-11 10:49:26.484 [info] [127.0.0.1][24f6d249][ManagementConnection] New connection established.
+2023-12-11 10:49:27.345 [info] [127.0.0.1][9df4986f][ExtensionHostConnection] New connection established.
+2023-12-11 10:49:27.351 [info] [127.0.0.1][9df4986f][ExtensionHostConnection] <7813> Launched Extension Host Process.
+2023-12-12 01:44:16.953 [info] [127.0.0.1][77ceabb1][ManagementConnection] New connection established.
+2023-12-12 01:44:18.228 [info] [127.0.0.1][e78c14b8][ExtensionHostConnection] New connection established.
+2023-12-12 01:44:18.234 [info] [127.0.0.1][e78c14b8][ExtensionHostConnection] <17714> Launched Extension Host Process.
+2023-12-12 01:49:17.255 [info] [127.0.0.1][9df4986f][ExtensionHostConnection] <7813> Extension Host Process exited with code: 0, signal: null.
+2023-12-12 02:16:39.930 [info] [127.0.0.1][13541aca][ManagementConnection] New connection established.
+2023-12-12 02:16:42.560 [info] [127.0.0.1][2546f867][ExtensionHostConnection] New connection established.
+2023-12-12 02:16:42.570 [info] [127.0.0.1][2546f867][ExtensionHostConnection] <1043> Launched Extension Host Process.
+2023-12-12 04:13:15.895 [info] [127.0.0.1][f2c94045][ManagementConnection] New connection established.
+2023-12-12 04:13:16.195 [info] [127.0.0.1][5dd7d0b3][ExtensionHostConnection] New connection established.
+2023-12-12 04:13:16.204 [info] [127.0.0.1][5dd7d0b3][ExtensionHostConnection] <25217> Launched Extension Host Process.
+2023-12-12 04:18:15.970 [info] [127.0.0.1][e78c14b8][ExtensionHostConnection] <17714> Extension Host Process exited with code: 0, signal: null.
+2023-12-12 04:18:16.127 [info] [127.0.0.1][2546f867][ExtensionHostConnection] <1043> Extension Host Process exited with code: 0, signal: null.
+2023-12-12 05:45:31.141 [info] [127.0.0.1][f1b4b579][ManagementConnection] New connection established.
+2023-12-12 05:45:31.706 [info] [127.0.0.1][cd83a0b9][ExtensionHostConnection] New connection established.
+2023-12-12 05:45:31.712 [info] [127.0.0.1][cd83a0b9][ExtensionHostConnection] <13977> Launched Extension Host Process.
+2023-12-12 05:50:31.332 [info] [127.0.0.1][5dd7d0b3][ExtensionHostConnection] <25217> Extension Host Process exited with code: 0, signal: null.
+2023-12-12 06:29:32.468 [info] [127.0.0.1][f1b4b579][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-12-12 06:29:32.496 [info] [127.0.0.1][cd83a0b9][ExtensionHostConnection] <13977> Extension Host Process exited with code: 0, signal: null.
+2023-12-12 06:29:39.424 [info] [127.0.0.1][aa40708b][ManagementConnection] New connection established.
+2023-12-12 06:29:39.662 [info] [127.0.0.1][f9a9dbda][ExtensionHostConnection] New connection established.
+2023-12-12 06:29:39.668 [info] [127.0.0.1][f9a9dbda][ExtensionHostConnection] <6046> Launched Extension Host Process.
+2023-12-12 06:59:29.991 [info] [127.0.0.1][2475337a][ManagementConnection] New connection established.
+2023-12-12 06:59:30.672 [info] [127.0.0.1][8afb623c][ExtensionHostConnection] New connection established.
+2023-12-12 06:59:30.688 [info] [127.0.0.1][8afb623c][ExtensionHostConnection] <19756> Launched Extension Host Process.
+2023-12-12 07:04:08.857 [info] [127.0.0.1][300e1f6b][ManagementConnection] New connection established.
+2023-12-12 07:04:09.597 [info] [127.0.0.1][3d68ba4f][ExtensionHostConnection] New connection established.
+2023-12-12 07:04:09.604 [info] [127.0.0.1][3d68ba4f][ExtensionHostConnection] <23435> Launched Extension Host Process.
+2023-12-12 10:08:45.601 [info] [127.0.0.1][f9a9dbda][ExtensionHostConnection] <6046> Extension Host Process exited with code: 0, signal: null.
+2023-12-12 10:58:53.802 [info] [127.0.0.1][82edb637][ManagementConnection] New connection established.
+2023-12-12 10:58:54.076 [info] [127.0.0.1][766b5a1c][ExtensionHostConnection] New connection established.
+2023-12-12 10:58:54.090 [info] [127.0.0.1][766b5a1c][ExtensionHostConnection] <21415> Launched Extension Host Process.
+2023-12-12 10:58:56.400 [info] [127.0.0.1][fa58e373][ManagementConnection] New connection established.
+2023-12-12 10:58:57.344 [info] [127.0.0.1][5913293a][ExtensionHostConnection] New connection established.
+2023-12-12 10:58:57.388 [info] [127.0.0.1][5913293a][ExtensionHostConnection] <22345> Launched Extension Host Process.
+2023-12-12 13:16:39.989 [info] [127.0.0.1][91f95aae][ManagementConnection] New connection established.
+2023-12-12 13:16:40.264 [info] [127.0.0.1][95c1f0d8][ManagementConnection] New connection established.
+2023-12-12 13:16:40.610 [info] [127.0.0.1][57916a28][ExtensionHostConnection] New connection established.
+2023-12-12 13:16:40.637 [info] [127.0.0.1][57916a28][ExtensionHostConnection] <20395> Launched Extension Host Process.
+2023-12-12 13:16:40.789 [info] [127.0.0.1][0aed2175][ExtensionHostConnection] New connection established.
+2023-12-12 13:16:40.814 [info] [127.0.0.1][0aed2175][ExtensionHostConnection] <20412> Launched Extension Host Process.
+2023-12-12 13:21:40.263 [info] [127.0.0.1][766b5a1c][ExtensionHostConnection] <21415> Extension Host Process exited with code: 0, signal: null.
+2023-12-12 13:21:40.264 [info] [127.0.0.1][3d68ba4f][ExtensionHostConnection] <23435> Extension Host Process exited with code: 0, signal: null.
+2023-12-12 13:21:40.271 [info] [127.0.0.1][5913293a][ExtensionHostConnection] <22345> Extension Host Process exited with code: 0, signal: null.
+2023-12-12 13:21:40.277 [info] [127.0.0.1][8afb623c][ExtensionHostConnection] <19756> Extension Host Process exited with code: 0, signal: null.
+2023-12-12 13:31:21.252 [info] [127.0.0.1][28c2d549][ManagementConnection] New connection established.
+2023-12-12 13:31:21.504 [info] [127.0.0.1][d5e6fb03][ExtensionHostConnection] New connection established.
+2023-12-12 13:31:21.530 [info] [127.0.0.1][d5e6fb03][ExtensionHostConnection] <30888> Launched Extension Host Process.
+2023-12-12 13:31:22.008 [info] [127.0.0.1][15b41dad][ManagementConnection] New connection established.
+2023-12-12 13:31:23.592 [info] [127.0.0.1][0bedb87d][ExtensionHostConnection] New connection established.
+2023-12-12 13:31:23.621 [info] [127.0.0.1][0bedb87d][ExtensionHostConnection] <31024> Launched Extension Host Process.
+2023-12-12 13:36:21.532 [info] [127.0.0.1][57916a28][ExtensionHostConnection] <20395> Extension Host Process exited with code: 0, signal: null.
+2023-12-12 13:36:21.534 [info] [127.0.0.1][0aed2175][ExtensionHostConnection] <20412> Extension Host Process exited with code: 0, signal: null.
+2023-12-12 18:09:16.111 [info] [127.0.0.1][d5e6fb03][ExtensionHostConnection] <30888> Extension Host Process exited with code: 0, signal: null.
+2023-12-12 18:09:38.084 [info] [127.0.0.1][0bedb87d][ExtensionHostConnection] <31024> Extension Host Process exited with code: 0, signal: null.
+2023-12-13 01:16:18.295 [info] [127.0.0.1][ae56dc5a][ManagementConnection] New connection established.
+2023-12-13 01:16:18.691 [info] [127.0.0.1][06bcf497][ExtensionHostConnection] New connection established.
+2023-12-13 01:16:18.738 [info] [127.0.0.1][06bcf497][ExtensionHostConnection] <25545> Launched Extension Host Process.
+2023-12-13 01:16:19.466 [info] [127.0.0.1][e3a55c35][ManagementConnection] New connection established.
+2023-12-13 01:16:19.892 [info] [127.0.0.1][bb488487][ExtensionHostConnection] New connection established.
+2023-12-13 01:16:19.938 [info] [127.0.0.1][bb488487][ExtensionHostConnection] <25660> Launched Extension Host Process.
+2023-12-13 04:55:09.748 [info] [127.0.0.1][71517b04][ManagementConnection] New connection established.
+2023-12-13 04:55:10.320 [info] [127.0.0.1][46c530e2][ExtensionHostConnection] New connection established.
+2023-12-13 04:55:10.397 [info] [127.0.0.1][46c530e2][ExtensionHostConnection] <15465> Launched Extension Host Process.
+2023-12-13 04:55:15.709 [info] [127.0.0.1][d3e62033][ManagementConnection] New connection established.
+2023-12-13 04:55:16.219 [info] [127.0.0.1][9571748a][ExtensionHostConnection] New connection established.
+2023-12-13 04:55:16.277 [info] [127.0.0.1][9571748a][ExtensionHostConnection] <16569> Launched Extension Host Process.
+2023-12-13 05:00:09.871 [info] [127.0.0.1][06bcf497][ExtensionHostConnection] <25545> Extension Host Process exited with code: 0, signal: null.
+2023-12-13 05:00:09.991 [info] [127.0.0.1][bb488487][ExtensionHostConnection] <25660> Extension Host Process exited with code: 0, signal: null.
+2023-12-13 11:13:06.379 [info] [127.0.0.1][bfc6fb4a][ManagementConnection] New connection established.
+2023-12-13 11:13:07.414 [info] [127.0.0.1][b7653d34][ExtensionHostConnection] New connection established.
+2023-12-13 11:13:07.533 [info] [127.0.0.1][b7653d34][ExtensionHostConnection] <19695> Launched Extension Host Process.
+2023-12-13 11:13:08.497 [info] [127.0.0.1][cdbc76f6][ManagementConnection] New connection established.
+2023-12-13 11:13:09.400 [info] [127.0.0.1][5d9a1d64][ExtensionHostConnection] New connection established.
+2023-12-13 11:13:09.551 [info] [127.0.0.1][5d9a1d64][ExtensionHostConnection] <19837> Launched Extension Host Process.
+2023-12-13 11:18:06.576 [info] [127.0.0.1][9571748a][ExtensionHostConnection] <16569> Extension Host Process exited with code: 0, signal: null.
+2023-12-13 11:18:06.635 [info] [127.0.0.1][46c530e2][ExtensionHostConnection] <15465> Extension Host Process exited with code: 0, signal: null.

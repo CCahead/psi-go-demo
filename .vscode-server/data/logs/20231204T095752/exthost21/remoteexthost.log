@@ -1,0 +1,15 @@
+2023-12-12 10:58:54.795 [info] Extension host with pid 21415 started
+2023-12-12 10:58:54.795 [error] Error: EEXIST: file already exists, open '/root/.vscode-server/data/User/workspaceStorage/88b60221fed3843bca804113516a96b3/vscode.lock'
+2023-12-12 10:58:54.796 [info] Lock '/root/.vscode-server/data/User/workspaceStorage/88b60221fed3843bca804113516a96b3/vscode.lock': Could not acquire lock, checking if the file is stale.
+2023-12-12 10:58:54.800 [info] Lock '/root/.vscode-server/data/User/workspaceStorage/88b60221fed3843bca804113516a96b3/vscode.lock': The lock does not look stale, elapsed: 389 ms, giving up.
+2023-12-12 10:58:54.807 [info] Lock '/root/.vscode-server/data/User/workspaceStorage/88b60221fed3843bca804113516a96b3-1/vscode.lock': Lock acquired.
+2023-12-12 10:58:54.933 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: false, activationEvent: '*', root cause: vscode.git
+2023-12-12 10:58:54.935 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-12-12 10:58:55.208 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: '*'
+2023-12-12 10:58:55.208 [info] ExtensionService#_doActivateExtension vscode.github, startup: false, activationEvent: '*'
+2023-12-12 10:58:55.515 [info] Eager extensions activated
+2023-12-12 10:58:55.515 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-12-12 10:58:55.516 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-12-12 13:21:40.228 [info] Extension host terminating: renderer disconnected for too long (2)
+2023-12-12 13:21:40.231 [info] Lock '/root/.vscode-server/data/User/workspaceStorage/88b60221fed3843bca804113516a96b3-1/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2023-12-12 13:21:40.252 [info] Extension host with pid 21415 exiting with code 0

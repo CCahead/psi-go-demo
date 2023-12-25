@@ -1,0 +1,27 @@
+2023-12-21 01:53:23.269 [info] Log level: Info
+2023-12-21 01:53:23.270 [info] Validating found git in: "git"
+2023-12-21 01:53:23.270 [info] Using git "2.39.2" from "git"
+2023-12-21 01:53:23.270 [info] > git rev-parse --show-toplevel [20ms]
+2023-12-21 01:53:23.270 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-12-21 01:53:23.270 [info] > git rev-parse --show-toplevel [1ms]
+2023-12-21 01:53:23.270 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-12-21 01:53:23.270 [info] > git rev-parse --show-toplevel [1ms]
+2023-12-21 01:53:23.270 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-12-21 01:53:23.270 [info] > git rev-parse --show-toplevel [1ms]
+2023-12-21 01:53:23.270 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-12-21 01:53:23.270 [info] > git rev-parse --show-toplevel [1ms]
+2023-12-21 01:53:23.270 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-12-21 01:53:23.270 [info] > git rev-parse --show-toplevel [1ms]
+2023-12-21 01:53:23.270 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-12-21 01:53:23.270 [info] > git rev-parse --show-toplevel [0ms]
+2023-12-21 01:53:23.270 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-12-21 01:53:32.094 [info] > git rev-parse --show-toplevel [1ms]
+2023-12-21 01:53:32.094 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-12-21 01:59:53.607 [info] > git rev-parse --show-toplevel [6ms]
+2023-12-21 01:59:53.607 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-12-21 01:59:58.170 [info] > git rev-parse --show-toplevel [3ms]
+2023-12-21 01:59:58.170 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-12-21 02:03:59.688 [info] > git rev-parse --show-toplevel [1ms]
+2023-12-21 02:03:59.688 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-12-21 02:04:04.358 [info] > git rev-parse --show-toplevel [2ms]
+2023-12-21 02:04:04.359 [info] fatal: not a git repository (or any of the parent directories): .git
