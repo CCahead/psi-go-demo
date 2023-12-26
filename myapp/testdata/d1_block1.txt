@@ -1,6 +1,6 @@
 name,age,gender
 tom,10,male
-bob ,11,
+bob,11,
 sam, 23,male
-lily ,8,female
+lily,8,female
 lily, 9,male

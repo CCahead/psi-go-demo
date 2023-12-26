@@ -1,0 +1,3 @@
+marry,27,female
+jane,22,female
+james,10,male

@@ -15,32 +15,33 @@ import (
     
 // }
 // how to implement Context interface?
+type Block struct{
+    block_id string
+    plain_size uint64
+    sha256 string
+}
+
 type DataSet struct{
-    
+    dataset_id string
+    address string
+    tag uint32
+    blocks []Block   
 }
 type Context interface{
     Read_Block() []string
-    Write_Block()[]string
+    Write_File()  //desc string,data []byte return ()
     Task_Info()uint32
     Datasets_By_Tag() []DataSet
 }
 // mock MyContext： 假设这里有一个map管理block_path
-type MyContext struct{
+type MyContext struct{}
 
-    // myMap map[string]string
-}
-
-
-type Block struct{
-    id string
-    path string
-}
 type Column struct{
     name string
     idx int32
 }
 type Arguments struct{
-    tag int32
+    tag uint32
     columns []Column
 }
 type Result struct{
@@ -72,41 +73,45 @@ func (r PSIReport) String() string {
     return builder.String()
 }
 // mock
-// func Get_BlockPath(dataset_id string, block_id string) ([]byte,error){
-    
-//     path :="t.txt"
-//     block_data ,err := ioutil.ReadFile(path) //demo of read_block 问题 我从read_block拿到的数据是什么？ []byte 这里是mock的read_block()方法 假设拿到的数据叫做cursor
-//     if err != nil {
-//         fmt.Println("Error reading file:", err)
-        
-//         return nil,err
-//     }
-
-//     return block_data,nil
-// }
 func Read_Block(ctx *MyContext,dataset_id string, block_id string)([]byte,error){
-
-    if (dataset_id == "0" && block_id == "1"){
+    var block_data []byte
+    var err error
+    if (dataset_id == "00000" && block_id == "1"){
         block_1_1_path :="testdata/d1_block1.txt"
-        block_data1_1 ,err := ioutil.ReadFile(block_1_1_path) //demo of read_block 问题 我从read_block拿到的数据是什么？ []byte 这里是mock的read_block()方法 假设拿到的数据叫做cursor
+        fmt.Println(block_1_1_path)
+        block_data ,err = ioutil.ReadFile(block_1_1_path) //demo of read_block 问题 我从read_block拿到的数据是什么？ []byte 这里是mock的read_block()方法 假设拿到的数据叫做cursor
         if err != nil {
             fmt.Println("Error reading file:", err)
             return nil,err
         }
-        return block_data1_1,nil
+        return block_data,nil
     }
-//  block_2_1
-    if (dataset_id == "1" && block_id == "1"){
+    if (dataset_id == "00000" && block_id == "2"){
+        block_1_2_path :="testdata/d1_block1_2.txt"
+        fmt.Println(block_1_2_path)
+        block_data ,err = ioutil.ReadFile(block_1_2_path) //demo of read_block 问题 我从read_block拿到的数据是什么？ []byte 这里是mock的read_block()方法 假设拿到的数据叫做cursor
+        if err != nil {
+            fmt.Println("Error reading file:", err)
+            return nil,err
+        }
+        return block_data,nil
+    }     //  block_2_1
+    if (dataset_id == "11111" && block_id == "1"){
         block_2_1_path :="testdata/d2_block1.txt"
-        block_data2_1 ,err := ioutil.ReadFile(block_2_1_path) //demo of read_block 问题 我从read_block拿到的数据是什么？ []byte 这里是mock的read_block()方法 假设拿到的数据叫做cursor
+        fmt.Println(block_2_1_path)
+        block_data ,err = ioutil.ReadFile(block_2_1_path) //demo of read_block 问题 我从read_block拿到的数据是什么？ []byte 这里是mock的read_block()方法 假设拿到的数据叫做cursor
         if err != nil {
             fmt.Println("Error reading file:", err)     
             return nil,err
         }
-        return block_data2_1,nil
+        return block_data,nil
 
-    }    
+    }
     
+    return block_data,err
+}
+
+func Write_File(){
 
 }
 
@@ -114,14 +119,51 @@ func Task_Info(ctx *MyContext) uint32{
     return 2
 }
 
-func From_TEE_Config(ctx *MyContext)([]Arguments){//error
-    args1 := new(Arguments)  
+//一共有几个DataSet需要做
+
+func DataSets_By_Tag(ctx * MyContext,tag uint32) ([]DataSet,error){
+    // 把
+    data := []DataSet{}
+
+    if tag == 0 {
+        dataset1 := new(DataSet)
+        block_1_1 := Block{block_id:"1"}
+        block_1_2 := Block{block_id:"2"} 
+
+        dataset1.blocks = append(dataset1.blocks,block_1_1)
+        dataset1.blocks = append(dataset1.blocks,block_1_2)
+        dataset1.dataset_id="00000"
+        // get dataset1： [block1,block2]blocks
+        data = append(data,*dataset1)
+    }
+    if tag == 1{
+        dataset2 := new(DataSet)
+        block_2_1 := Block{block_id:"1"}
+        // block_2_2 := Block{block_id:"2"}
+
+        dataset2.blocks = append(dataset2.blocks,block_2_1)
+        // dataset2.blocks = append(dataset2.blocks,block_2_2)
+        dataset2.tag = 1
+        dataset2.dataset_id = "11111"
+        data = append(data,*dataset2)
+
+        // get dataset2
+    }
+    return data,nil
+}
+
+
+func From_TEE_Config(ctx *MyContext)([]Arguments,error){//error
     col1 := Column{name: "name"}
     col2 := Column{name: "gender"}
+// 
+    args1 := new(Arguments)  
+    args1.tag = 0
     args1.columns = append(args1.columns, col1)
     args1.columns = append(args1.columns, col2)
 
-    args2 := new(Arguments)  
+    args2 := new(Arguments)
+    args2.tag = 1
     args2.columns = append(args2.columns, col1)
     args2.columns = append(args2.columns, col2)
 
@@ -132,7 +174,7 @@ func From_TEE_Config(ctx *MyContext)([]Arguments){//error
 
 
 
-    return arguments
+    return arguments,nil
 }
 
 
@@ -144,38 +186,45 @@ func psi_validate_args(args []Arguments)(bool,error) { //Result...
     return true,nil
 }
 func psi_add_dataset(ctx *MyContext, args *Arguments, report *PSIReport) (*PSIReport,error) {//ctx *Context, args *Arguments, report *PSIReport
-    // get the dataset from outside: using the arguments: id, datasetid
-    // psi
-    // 
-    // psi_read_data()
-    data_label := Datasets_By_Tag()
+ 
+    dataset ,err := DataSets_By_Tag(ctx,args.tag) //[]DataSet
+    if err != nil {
+        fmt.Println("Error add_dataset:", err)
+        return nil,err
+    }
+
+    // for _,a in range args{
+    //     fmt.Println("")
+    // }
+
+    psi_read_data(ctx,&dataset[0],args.columns,report)
     return report,nil
 }
-func psi_read_data(ctx *MyContext, args * Arguments, report * PSIReport) (*PSIReport,error){
+func psi_read_data(ctx *MyContext, dataset *DataSet, columns []Column ,report * PSIReport) (*PSIReport,error){
     
     singleDatasetReport := new(DataSetReport)
-    singleDatasetReport.id = "test"
-    singleDatasetReport.tag = 0
+    singleDatasetReport.id = dataset.dataset_id //?
+    singleDatasetReport.tag = dataset.tag
 
     // test() get the raw data block_id,DataSet_id
     // we assume the block_data comes from outside
-    block_path := "testdata/d1_block1.txt"
+    // block_path := "testdata/d1_block1.txt"
     //iter control 
     pos := 0 
     var header_idx []int 
     // blocks := []Block{}// 从外部拿到这个block数组 也是mock的
-    //有很多个block
+    //
     // var block Block //how to anounce a struct? 
     // block := Block{id: "some_id", path: block_path}
 
     
-    block := Block{id: "some_id", path: block_path}
-    blocks = append(blocks,block)//mock
+    blocks := dataset.blocks 
     // demo: add the block_path 
     for _,b := range blocks{
-        // read_block()// get the sequence data
+        // get the sequence data
         counts := make(map[string]int)
-        block_data,err :=Read_Block(1,1)
+        // fmt.Println(dataset.dataset_id,b.block_id)
+        block_data,err :=Read_Block(ctx,dataset.dataset_id,b.block_id)
         // block_data, err := ioutil.ReadFile(b.path) //demo of read_block 问题 我从read_block拿到的数据是什么？ []byte 这里是mock的read_block()方法 假设拿到的数据叫做cursor
         // block_data里面储存了所有的[]bytes数据，可能数据量很大，有1e8的数据，这时候我需要使用bufio.Scanner来扫描它
         // uint8类型的字节流吗？那我在这里应该使用什么函数来处理它？
@@ -184,7 +233,7 @@ func psi_read_data(ctx *MyContext, args * Arguments, report * PSIReport) (*PSIRe
             
             return nil,err
         }
-
+        // fmt.Println(block_data)
         // dataStr := string(block_data) //之前的这里是处理的dataStr 但是我这里应该要直接处理byte数据吧？
         // fmt.Println(dataStr) // 将字节切片转换为字符串并打印
         // fmt.Println("\n")    // 打印一个换行符
@@ -201,7 +250,7 @@ func psi_read_data(ctx *MyContext, args * Arguments, report * PSIReport) (*PSIRe
             if scanner.Scan(){
                 headerLine := scanner.Text() //这个得到的是什么元数据？
                 header_Text := strings.Split(headerLine,",") //split the data by "," []strings? 
-                for _,col := range args.columns{
+                for _,col := range columns{
                     flag =false
                     for idx,Text := range header_Text{
                         singleDatasetReport.columns = append(singleDatasetReport.columns,Text)
@@ -212,40 +261,51 @@ func psi_read_data(ctx *MyContext, args * Arguments, report * PSIReport) (*PSIRe
                     } //
                 }// for loop: b
             }//scanner
+            // check whether the row is properly founded or not
+            if !flag {
+                fmt.Println("check flag err",err)
+                return nil,err
+            }
         }// scan the header
-        // check whether the row is properly founded or not
-        if !flag {
-            fmt.Println("check flag err",err)
-            return nil,err
-        }
+
         // then read the rest data
         // rows := bytes.Split(block_data, []byte("\n"))
-
         for scanner.Scan(){//Scanner_Iter
             line_tmp := scanner.Text()
             line := strings.Split(line_tmp,",")
+            for i, value := range line {
+                if value == "" { // 检查空字符串
+                    line[i] = " " // 替换为单个空格
+                }
+            }
             var keyPart []string
             for _,i := range header_idx{//检查元素，并且读入这一行的数据
-                keyPart = append(keyPart,line[i])
+                // fmt.Println(line[i])
+                // if i > len(line){
+                //     singleDatasetReport.missing++
+                //     continue 
+                // }
                 // 如果数据有缺失的话，missing++，跳出这个循环并且读下一行了
-                if line[i] == "" {
+                if line[i] == " "{
                     singleDatasetReport.missing++
                     continue
                 }
-                key := strings.Join(keyPart,"")
-                singleDatasetReport.rows++
-                if counts[key] == 0{//key 查询一下 有就不加 set map扩容
-                    report.reportMap[key]++
-                    counts[key]++
-                }                
+                keyPart = append(keyPart,line[i])       
             }
+            key := strings.Join(keyPart,"")
+            pos++
+            if counts[key] == 0{//key 查询一下 有就不加 set map扩容
+                report.reportMap[key]++
+                counts[key]++
+            }         
+
         }
 
 
 
         // fmt.Println("Temp map:", counts)
     }//block loop
-    
+    singleDatasetReport.rows = (uint32)(pos)
     report.dataset = append(report.dataset,*singleDatasetReport)
     return report,nil
 }
@@ -255,7 +315,7 @@ func psi_read_data(ctx *MyContext, args * Arguments, report * PSIReport) (*PSIRe
 
 func psi_summary(ctx *MyContext, report *PSIReport) (*PSIReport,error){
     // mock一下taskInfo 哦哦
-    thres := Task_Info(ctx)
+    thres := Task_Info(ctx) -1
     for _,v := range report.reportMap{
         if v > thres {
             report.size++
@@ -307,9 +367,39 @@ func test(m map[string]uint8, block_path string) {
     // fmt.Println("Temp map:", counts)
 
 }
+func execute(ctx *MyContext)(string,error){
+    var err error
+    report := new(PSIReport)
+    report.reportMap = make(map[string]uint32) // 初始化map
+// mock tee_config的参数
+// 
+    arguments,err :=From_TEE_Config(ctx) //step 1:get the []arguments slice
+    if err != nil{
+        fmt.Println("FROM TEE_CONFIG ERR",err)
+        return "",err
+    }
+    
+    // validate_args() -> get a true
+// then ...
+    // 省去一步 取dataset，直接readdata了
+    for _,args := range arguments{
+        report,err = psi_add_dataset(ctx,&args,report)
+        if err != nil {
+            fmt.Println("psi_add_dataset", err)
+            return "",err
+        }
+    }
+    // psi_read_data(&args,report)
+    psi_summary(ctx,report)
 
+    fmt.Println(*report)
 
-func main() {
+    // serialized := 
+    Write_File()
+    return "",nil
+}
+
+func main()  {
     // block1_1_path := "testdata/d1_block1.txt"
     // block2_1_path := "testdata/d2_block1.txt"
     // myMap := make(map[string]uint8)
@@ -320,20 +410,6 @@ func main() {
     // test(myMap, block2_1_path)
     // fmt.Println("After processing 2:", myMap)
     // 前面省去validate操作，从外部调用tee_config拿arguments
-    report := new(PSIReport)
-    report.reportMap = make(map[string]uint32) // 初始化map
-// mock tee_config的参数
-// 
-    myContext := new(MyContext)
-    myContext.myMap
-    arguments :=From_TEE_Config(myContext)
-
-    
-    // 省去一步 取dataset，直接readdata了
-    for _,args := range arguments{
-        psi_read_data(&args,report)
-    }
-    psi_summary(myContext,report)
-
-    fmt.Println(*report)
+    ctx := new(MyContext)
+    execute(ctx)
 }

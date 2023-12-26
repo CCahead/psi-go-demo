@@ -1,6 +1,8 @@
 name,age,gender
 tom,10,male
-bob1 ,11,male
-bob1 ,10,female
-
-
+bob1,11,male
+bob1,10,female
+lily,8,female
+marry,27,female
+jane,22,female
+james,10,male
