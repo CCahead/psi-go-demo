@@ -73,7 +73,12 @@ func (r PSIReport) String() string {
     return builder.String()
 }
 // mock
-func Read_Block(ctx *MyContext,dataset_id string, block_id string)([]byte,error){
+func Read_Block(ctx *MyContext,dataset_id string, block_id string)(
+    
+    
+    
+    
+    []byte,error){
     var block_data []byte
     var err error
     if (dataset_id == "00000" && block_id == "1"){
@@ -197,7 +202,11 @@ func psi_add_dataset(ctx *MyContext, args *Arguments, report *PSIReport) (*PSIRe
     //     fmt.Println("")
     // }
 
-    psi_read_data(ctx,&dataset[0],args.columns,report)
+    report,err =psi_read_data(ctx,&dataset[0],args.columns,report)
+    if err != nil {
+        fmt.Println("Error read data:", err)
+        return nil,err
+    }
     return report,nil
 }
 func psi_read_data(ctx *MyContext, dataset *DataSet, columns []Column ,report * PSIReport) (*PSIReport,error){
@@ -205,6 +214,9 @@ func psi_read_data(ctx *MyContext, dataset *DataSet, columns []Column ,report * 
     singleDatasetReport := new(DataSetReport)
     singleDatasetReport.id = dataset.dataset_id //?
     singleDatasetReport.tag = dataset.tag
+    for _,col := range columns{
+        singleDatasetReport.columns = append(singleDatasetReport.columns,col.name)
+    }
 
     // test() get the raw data block_id,DataSet_id
     // we assume the block_data comes from outside
@@ -253,7 +265,6 @@ func psi_read_data(ctx *MyContext, dataset *DataSet, columns []Column ,report * 
                 for _,col := range columns{
                     flag =false
                     for idx,Text := range header_Text{
-                        singleDatasetReport.columns = append(singleDatasetReport.columns,Text)
                         if col.name == Text{
                             header_idx = append(header_idx,idx)
                             flag = true
